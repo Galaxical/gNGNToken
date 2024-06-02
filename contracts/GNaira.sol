@@ -21,3 +21,18 @@ contract G_Naira is ERC20, ERC20Burnable, AccessControl, ERC20Permit {
        
     }
 
+    function grantRole(bytes32 role, address account) public override onlyRole(getRoleAdmin(role)) {
+        _grantRole(role, account);
+    }
+    
+    function grantGovernorRole(address governor) public {
+    _grantRole(DEFAULT_ADMIN_ROLE, governor);
+    _grantRole(GOVERNOR_ROLE, governor);
+    }
+
+    function mint(address to, uint256 amount) public onlyRole (GOVERNOR_ROLE) returns (bool) {
+        _mint(to, amount);
+        return true;
+    }
+
+
