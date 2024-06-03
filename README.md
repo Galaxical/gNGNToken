@@ -1,4 +1,4 @@
-# GAME-W3-6: NaijaFlip Memory Card Game
+# G-Naira Token (GNGN)
 
 ##  Background
 There is a rising issue concerning the country’s financial sector. To solve this, the government decided to move its financial system to the Blockchain for better transparency and accountability.
